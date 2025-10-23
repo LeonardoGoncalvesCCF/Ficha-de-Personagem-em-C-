@@ -1,0 +1,15 @@
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\bin\Debug\net8.0\FichaDePersonagemEmC#.exe
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\bin\Debug\net8.0\FichaDePersonagemEmC#.deps.json
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\bin\Debug\net8.0\FichaDePersonagemEmC#.runtimeconfig.json
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\bin\Debug\net8.0\FichaDePersonagemEmC#.dll
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\bin\Debug\net8.0\FichaDePersonagemEmC#.pdb
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.AssemblyInfoInputs.cache
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.AssemblyInfo.cs
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.csproj.CoreCompileInputs.cache
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.sourcelink.json
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.dll
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\refint\FichaDePersonagemEmC#.dll
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.pdb
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\FichaDePersonagemEmC#.genruntimeconfig.cache
+C:\Users\leonardo\source\repos\FichaDePersonagemEmC#\FichaDePersonagemEmC#\obj\Debug\net8.0\ref\FichaDePersonagemEmC#.dll
