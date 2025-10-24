@@ -1,7 +1,6 @@
-﻿class Program {
+﻿using System.Collections;
 
-
-
+class Program {
     static void Main(String[] args) {
 
         Ficha();
@@ -34,7 +33,7 @@
 
         Console.WriteLine("Qual o nome do perosnagem??? ");
         string nome = Console.ReadLine();
-        return nome;
+        return nome!;
 
 
     }
@@ -104,7 +103,7 @@
         int Sabedoria = int.Parse(Console.ReadLine());
 
         //Carisma
-        Console.WriteLine("Carisma ");
+        Console.WriteLine("Carisma: ");
         int Carisma = int.Parse(Console.ReadLine());
 
         return (Forca, Destreza, Constituicao, Inteligencia, Sabedoria, Carisma);
