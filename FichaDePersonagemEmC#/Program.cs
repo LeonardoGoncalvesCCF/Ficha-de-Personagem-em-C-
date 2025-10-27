@@ -10,7 +10,7 @@ class Program {
     }
 
 
-    //Escolha com Switch
+    //MENU
     public static void MenuDeEscolha() {
 
         Console.WriteLine("Bem vindo ao APP !!!");
@@ -26,7 +26,7 @@ class Program {
         switch (opcoes) { 
             case "1":
 
-                APPCriaFicha();
+                FichaEmSwitch();
                 break; 
 
             case "2":
@@ -47,6 +47,34 @@ class Program {
     }
 
 
+    static string FichaEmSwitch() {
+
+        string nome = Nome();
+        int NivelPersonagem = Nivel();
+        string OpcaoRaca = RacaEscolha();
+        string OpcaoClasse = ClasseEscolha();
+        var (VidaMaxima, VidaAtual) = Vida();
+        int CA = ClasseDeArmadura();
+        var (Forca, Destreza, Constituicao, Inteligencia, Sabedoria, Carisma) = Status();
+
+     
+        Console.WriteLine("");
+        Console.WriteLine("-------------------------------------------------------------------------------");
+        Console.WriteLine($"| Nome do Personagem: {nome} || Nível {NivelPersonagem} ||");
+        Console.WriteLine("                                                                             -");
+        Console.WriteLine($"| Vida: {VidaAtual} / {VidaMaxima} || CA: {CA} ||");
+        Console.WriteLine("                                                                             -");
+        Console.WriteLine($"| Classe: {OpcaoClasse} || Raça: {OpcaoRaca}");
+        Console.WriteLine("                                                                             -");
+        Console.WriteLine($"| Força: {Forca} || Destreza: {Destreza} || Constituição: {Constituicao} || ");
+        Console.WriteLine("                                                                             -");
+        Console.WriteLine($"| Inteligência: {Inteligencia} || Sabedoria: {Sabedoria} || Crisma {Carisma} ||");
+        Console.WriteLine("                                                                             -");
+        Console.WriteLine("-------------------------------------------------------------------------------");
+
+        return "FichaEmSwitch";
+    }
+
     //Ficha pelo APP
     static void APPCriaFicha() {
 
@@ -55,7 +83,7 @@ class Program {
     }
     // Escolhendo Raça com Switch
     static string RacaEscolha() {
-
+        Console.WriteLine("");
         Console.WriteLine("Escolha Sua Raça: ");
         Console.WriteLine("");
         Console.WriteLine("1 Goblin \n" +
@@ -99,7 +127,7 @@ class Program {
                           "9 Mago \n" +
                           "10 Monge \n" +
                           "11 Patrulheiro ");
-
+        Console.WriteLine("  ");
         int OpcaoClasse = int.Parse(Console.ReadLine());
 
         return OpcaoClasse switch
@@ -121,6 +149,7 @@ class Program {
     }
 
     // --------------------------------------------------------------------------------------------------------------------\\
+    
     // Ficha
     public static void Ficha()
     {

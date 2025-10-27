@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FichaDePersonagemEmC#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78d577f969b531d3b637befdeadf9724d480a70a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59058616a63ad6024a3d638e206189fbbaf3914a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FichaDePersonagemEmC#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FichaDePersonagemEmC#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
