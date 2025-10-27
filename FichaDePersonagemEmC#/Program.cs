@@ -4,8 +4,8 @@ using System.ComponentModel.Design;
 class Program {
     static void Main(String[] args) {
 
-        // Ficha();
         MenuDeEscolha();
+
 
     }
 
@@ -25,17 +25,21 @@ class Program {
 
         switch (opcoes) { 
             case "1":
-                // CRIAR METODO COM SWITCH
+
+                APPCriaFicha();
                 break; 
 
             case "2":
+
                 Ficha();
                 break;
 
             case "3":
+
                 Console.WriteLine("Saindo... Até a proxima ");
                 break;
             default:
+
                 Console.WriteLine("Opção Invalida");
                 break;
         
@@ -43,10 +47,81 @@ class Program {
     }
 
 
+    //Ficha pelo APP
+    static void APPCriaFicha() {
 
+        RacaEscolha();
+        ClasseEscolha();
+    }
+    // Escolhendo Raça com Switch
+    static string RacaEscolha() {
 
+        Console.WriteLine("Escolha Sua Raça: ");
+        Console.WriteLine("");
+        Console.WriteLine("1 Goblin \n" +
+                          "2 Anão \n" +
+                          "3 Warfrorged \n" +
+                          "4 Aasimar \n" +
+                          "5 Elfo \n" +
+                          "6 Orc ");
+        Console.WriteLine("  ");
 
+        int OpcaoRaca = int.Parse(Console.ReadLine());
 
+        // devolvendo a escolha com SWITCH EXPRESSION
+        // nova versão do Switch Case 
+        return OpcaoRaca switch
+        {
+
+            1 => "Goblin",
+            2 => "Anão",
+            3 => "Waforged",
+            4 => "Aasimar",
+            5 => "Elfo",
+            6 => "Orc",
+            _ => "Humano"
+        };
+    }
+
+    // Escolhendo Classe com Switch
+    static string ClasseEscolha() {
+        Console.WriteLine("");
+        Console.WriteLine("Escolha Sua Classe: ");
+        Console.WriteLine("");
+        Console.WriteLine("1 Paladino \n" +
+                          "2 Clérigo \n" +
+                          "3 Bárbaro \n" +
+                          "4 Bardo \n" +
+                          "5 Druida \n" +
+                          "6 Feiticeiro \n" +
+                          "7 Guerreiro \n" +
+                          "8 Ladino \n" +
+                          "9 Mago \n" +
+                          "10 Monge \n" +
+                          "11 Patrulheiro ");
+
+        int OpcaoClasse = int.Parse(Console.ReadLine());
+
+        return OpcaoClasse switch
+        {
+            1 => "Paladino",
+            2 => "Clérigo",
+            3 => "Bárbaro",
+            4 => "Bardo",
+            5 => "Druida",
+            6 => "Feiticeiro",
+            7 => "Guerreiro",
+            8 => "Ladino",
+            9 => "Mago",
+            10 => "Monge",
+            11 => "Patrulheiro"
+        };
+    
+    
+    }
+
+    // --------------------------------------------------------------------------------------------------------------------\\
+    // Ficha
     public static void Ficha()
     {
         string nome = Nome();
@@ -176,8 +251,4 @@ class Program {
         return (Forca, Destreza, Constituicao, Inteligencia, Sabedoria, Carisma);
     }
 
-
-
-
-
-}
+}// Final Main
