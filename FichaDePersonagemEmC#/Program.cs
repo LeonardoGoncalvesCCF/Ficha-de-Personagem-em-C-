@@ -2,21 +2,33 @@
 using System.ComponentModel.Design;
 using FichaDePersonagemEmC_;
 
+
+
 class Program {
     
     static void Main(String[] args) {
 
         //MenuDeEscolha();
 
-        Ficha Teste = new Ficha("name", 0, 0, 0, 0);
- 
+        MotherSheet Teste = new MotherSheet("name", 0, 0, 0, 0, 0, 0, 0);
 
-        Teste.CharacterName = "Leo";
+        string nome1;
+        nome1 = Teste.GetCharacterName();
+
+        Teste._CharacterArmorClass = 10;
+       
+
+        Console.WriteLine(nome1);
+        
+        Teste.SetCharacterName("Jorge");
+
+        nome1 = Teste.GetCharacterName();
+
+        Console.WriteLine(nome1);   
 
 
-        Console.WriteLine(Teste.CharacterName);
- 
-          
+
+
 
     }
 
