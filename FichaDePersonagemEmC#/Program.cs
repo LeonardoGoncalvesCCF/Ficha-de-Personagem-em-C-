@@ -1,14 +1,26 @@
 ﻿using System.Collections;
 using System.ComponentModel.Design;
+using FichaDePersonagemEmC_;
 
 class Program {
+    
     static void Main(String[] args) {
 
-        MenuDeEscolha();
+        //MenuDeEscolha();
 
+        Ficha Teste = new Ficha("name", 0, 0, 0, 0);
+ 
+
+        Teste.CharacterName = "Leo";
+
+
+        Console.WriteLine(Teste.CharacterName);
+ 
+          
 
     }
 
+    public bool ehValido = false;
 
     //MENU
     public static void MenuDeEscolha() {
@@ -47,7 +59,7 @@ class Program {
     }
 
 
-    static string FichaEmSwitch() {
+    static void FichaEmSwitch() {
 
         string nome = Nome();
         int NivelPersonagem = Nivel();
@@ -72,7 +84,7 @@ class Program {
         Console.WriteLine("                                                                             -");
         Console.WriteLine("-------------------------------------------------------------------------------");
 
-        return "FichaEmSwitch";
+       // return "FichaEmSwitch";
     }
 
     //Ficha pelo APP
@@ -220,11 +232,31 @@ class Program {
     static int ClasseDeArmadura() {
 
         Console.WriteLine(" ");
-        Console.WriteLine("Qual sua Classe de Armadura (CA) ??? ");
-        int CA = int.Parse(Console.ReadLine());
+        Console.WriteLine("Qual sua Classe de Armadura (CA) ??? Digite um numero");
+        int CA=0;
+        try
+        {
+            CA = int.Parse(Console.ReadLine());
         return CA;
+        }
+        catch (Exception e){
+            Console.WriteLine("Você não digitou um número");
+            Console.WriteLine("Quer informar o CA? Digite 1 para sim e 2 para não.");
+            int resposta = int.Parse(Console.ReadLine());
+            if (resposta == 1)
+            {
+                return ClasseDeArmadura();
+            }
+            else
+            {
+               CA = 0;
+                return CA;
+            }
+                  
+        }
 
     }
+   
 
     //Entrada da Vida | Retornando em Tupla
     public static (int VidaMaxima, int VidaAtual)   Vida() {
