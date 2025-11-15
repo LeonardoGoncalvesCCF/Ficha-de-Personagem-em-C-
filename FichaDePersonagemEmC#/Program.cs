@@ -9,26 +9,43 @@ class Program {
     static void Main(String[] args) {
 
         //MenuDeEscolha();
-
-        MotherSheet Teste = new MotherSheet("name", 0, 0, 0, 0, 0, 0, 0);
-
-        string nome1;
-        nome1 = Teste.GetCharacterName();
-
-        Teste._CharacterArmorClass = 10;
        
 
-        Console.WriteLine(nome1);
-        
-        Teste.SetCharacterName("Jorge");
 
-        nome1 = Teste.GetCharacterName();
+        MotherSheet Teste = new MotherSheet("name", 0, 0, 0, 0, 0, 0, 0, 0);
+
+        string nome1 = Teste._CharacterName;
 
         Console.WriteLine(nome1);   
 
+        Teste._CharacterName = "Jorge";   
+
+        nome1 = Teste._CharacterName;
+
+        Console.WriteLine(nome1);   
+
+        Console.WriteLine(Teste._CharacterName);
 
 
 
+        Console.WriteLine("Digite Valor de Força: ");
+        int forca = int.Parse(Console.ReadLine());
+
+
+       
+        int mod = Teste.GravarStrengthModfiers(forca);
+
+
+        Console.WriteLine(mod);
+        Console.WriteLine(mod > 0? " +"+ mod: mod);
+
+        if (mod > 0)
+        {
+            Console.WriteLine($"+{mod}");
+        }
+        else { Console.WriteLine(mod);
+        
+        }
 
     }
 
