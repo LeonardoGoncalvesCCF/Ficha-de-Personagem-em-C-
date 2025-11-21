@@ -24,9 +24,14 @@ namespace FichaDePersonagemEmC_
         private int Modfiers;
 
         private int StrengthModfiers;
+        private int DexterityModfiers;
+        private int ConstitutionModfiers;
+        private int IntelligenceModfiers;
+        private int WisdomModfiers;
+        private int CharismaModfiers;
 
         //Construtor
-        public MotherSheet(string Name, int ArmorClass, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma, int modifiers)
+        public MotherSheet(string Name, int ArmorClass, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma, int modfiers, int ModStrength, int ModDexterity, int ModConstitution, int ModIntelligence, int ModWisdom, int ModCharisma)
         {
             this.CharacterName = Name;
             this.CharacterArmorClass = ArmorClass;
@@ -38,7 +43,14 @@ namespace FichaDePersonagemEmC_
             this.CharacterWisdom = Wisdom;
             this.CharacterCharisma = Charisma;
 
-            this.Modfiers = modifiers;
+            this.Modfiers = modfiers;
+
+            this.StrengthModfiers = ModStrength;
+            this.DexterityModfiers = ModDexterity;
+            this.ConstitutionModfiers = ModConstitution;
+            this.IntelligenceModfiers = ModIntelligence;
+            this.WisdomModfiers = ModWisdom;
+            this.CharismaModfiers = ModCharisma;
         }
 
 
@@ -55,24 +67,94 @@ namespace FichaDePersonagemEmC_
         public int _CharacterWisdom { get; set; }
         public int _CharacterCharisma { get; set; }
         public int _Modifiers { get; set; }
-        public int _StrengthModfiers { get; set; }
 
-        // Metodos para Gravar os Modificadores
+
+        //GET e SET de Modificadores
+
+        public int _StrengthModfiers { get; set; }
+        public int _DexterityModfiers { get; set; }
+        public int _ConstitutionModfiers { get; set; }
+        public int _IntelligenceModfiers { get; set; }
+        public int _WisdomModfiers { get; set; }
+        public int _CharismaModfiers { get; set; }
+
+
+
+        //---------- Metodos para Gravar os Modificadores
+
+        // Gravando Modificador de Força
         public int GravarStrengthModfiers(int value) 
         {
-            int Modificador = value;
+            int ModificadorStr = value;
 
-            int ModTeste = CalcModifiers(Modificador);
+            int CalculoModificadorStr = CalcModfiers(ModificadorStr);
 
-            StrengthModfiers = ModTeste;
+            StrengthModfiers = CalculoModificadorStr;
 
-            return ModTeste;
+            return CalculoModificadorStr;
 
+        }
+
+        // Gravando Modificador de Destreza
+        public int GravarDexterityModfiers(int value)
+        {
+            int ModificadorDex = value;
+
+            int CalculoModificadorDex = CalcModfiers(ModificadorDex);
+
+            DexterityModfiers = CalculoModificadorDex;
+
+            return CalculoModificadorDex;
+        }
+        // Gravando Modificador de Constituição
+        public int GravarConstitutionModfiers(int value) 
+        {
+            int ModificadorConst = value;
+
+            int ClaculoModificadorConst = CalcModfiers(ModificadorConst);
+
+            ConstitutionModfiers = ClaculoModificadorConst;
+
+            return ClaculoModificadorConst;
+        
+        }
+
+        // Gravando Modificador de Inteligencia 
+        public int GravarIntelligenceModfiers(int value)
+        {
+            int ModficadorIntell = value;
+
+            int ClaculoIntell = CalcModfiers(ModficadorIntell);
+
+            return ClaculoIntell;
+
+        }
+
+        // Gravando Modificador de Wisdom (Sabedoria)
+        public int GravarWisdomModfiers(int value) 
+        {
+            int MoficadorWisd = value;
+
+            int ClaculoWisd = CalcModfiers(MoficadorWisd);
+
+            return ClaculoWisd;
+        
+        }
+
+        // Gravando Modificador de Charisma
+        public int GravarCharismaModfiers(int value)
+        {
+            int ModificadorChar = value;
+
+            int CalculoChar = CalcModfiers(ModificadorChar);
+        
+            return CalculoChar;
+        
         }
 
 
         // Metodo para Caucluar os modificadores.
-        public int CalcModifiers(int value)
+        public int CalcModfiers(int value)
         {
 
             int Status = value;
@@ -185,6 +267,9 @@ namespace FichaDePersonagemEmC_
             }
             return 0;
         }
+
+
+
     } 
 }
 

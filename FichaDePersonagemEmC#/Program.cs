@@ -9,47 +9,63 @@ class Program {
     static void Main(String[] args) {
 
         //MenuDeEscolha();
-       
 
-
-        MotherSheet Teste = new MotherSheet("name", 0, 0, 0, 0, 0, 0, 0, 0);
-
-        string nome1 = Teste._CharacterName;
-
-        Console.WriteLine(nome1);   
-
-        Teste._CharacterName = "Jorge";   
-
-        nome1 = Teste._CharacterName;
-
-        Console.WriteLine(nome1);   
-
-        Console.WriteLine(Teste._CharacterName);
-
-
-
-        Console.WriteLine("Digite Valor de Força: ");
-        int forca = int.Parse(Console.ReadLine());
-
-
-       
-        int mod = Teste.GravarStrengthModfiers(forca);
-
-
-        Console.WriteLine(mod);
-        Console.WriteLine(mod > 0? " +"+ mod: mod);
-
-        if (mod > 0)
-        {
-            Console.WriteLine($"+{mod}");
-        }
-        else { Console.WriteLine(mod);
-        
-        }
+        MenuTeste();
 
     }
 
-    public bool ehValido = false;
+    //Menu de teste para MODIFICADORES
+    public static void MenuTeste() 
+    {
+
+        MotherSheet FichaTeste = new MotherSheet("name", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+        //Recebendo o valor
+
+        Console.WriteLine("Digite sua Força: ");
+        int Forca = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite sua Destreza: ");
+        int Destreza = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite sua Constituição: ");
+        int Constituicao = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite sua Inteligência: ");
+        int Inteligencia = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite sua Sabedoria: ");
+        int Sabedoria = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite seu Carisma: ");
+        int Carisma = int.Parse(Console.ReadLine());
+
+        // Gravando os Modficadores
+        int ModForca = FichaTeste.GravarStrengthModfiers(Forca);
+        int ModDestreza = FichaTeste.GravarDexterityModfiers(Destreza);
+        int ModConstituicao = FichaTeste.GravarConstitutionModfiers(Constituicao);
+        int ModInteligencia = FichaTeste.GravarIntelligenceModfiers(Inteligencia);
+        int ModSabedoria = FichaTeste.GravarWisdomModfiers(Sabedoria);
+        int ModCarisma = FichaTeste.GravarCharismaModfiers(Carisma);
+
+        //Checando se é maior que 0
+        bool EhModForcaPositivo = ModForca > 0;
+        bool EhModDestrezaPositivo = ModDestreza > 0;
+        bool EhModConstituicaoPositivo = ModConstituicao > 0;
+        bool EhModInteligenciaPositivo = ModInteligencia > 0;
+        bool EhModSabedoriaPositivo = ModSabedoria > 0;
+        bool EhModCarismaPositivo = ModCarisma > 0;
+
+    
+        Console.WriteLine($"Força: {Forca} | Mod: {(EhModForcaPositivo ? $"+{ModForca}" : ModForca)} ");
+        Console.WriteLine($"Destreza: {Destreza} | Mod: {(EhModDestrezaPositivo ? $"+{ModDestreza}" : ModDestreza)}");
+        Console.WriteLine($"Constituição: {Constituicao} | Mod: {(EhModConstituicaoPositivo ? $"+{ModConstituicao}" : ModConstituicao)}");
+        Console.WriteLine($"Inteligencia: {Inteligencia} | Mod: {(EhModInteligenciaPositivo ? $"+{ModInteligencia}" : ModInteligencia)}");
+        Console.WriteLine($"Sabedoria: {Sabedoria} | Mod: +{(EhModSabedoriaPositivo ? $"+{ModSabedoria}" : ModSabedoria)}");
+        Console.WriteLine($"Carisma: {Carisma}| Mod: +{(EhModCarismaPositivo ? $"+{ModCarisma}" : ModCarisma)}");
+
+   
+    }
 
     //MENU
     public static void MenuDeEscolha() {
